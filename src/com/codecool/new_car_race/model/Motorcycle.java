@@ -24,5 +24,6 @@ public class Motorcycle extends Vehicle{
     public Motorcycle(){
         motorcyclesCounter++;
         this.name = "Motorcycle " + motorcyclesCounter;
+        this.normalSpeed = 100;
     }
 }
