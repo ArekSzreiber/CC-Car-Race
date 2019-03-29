@@ -14,10 +14,10 @@ public class Vehicle {
         return currentSpeed;
     }
 
-/*
+
     public void prepareForLap(Race race){
 
-    }*/
+    }
     /**
      * The vehicle travels for an hour.
      * It increases the distance traveled.

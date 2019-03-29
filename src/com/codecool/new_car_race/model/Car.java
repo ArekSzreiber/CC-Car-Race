@@ -7,7 +7,7 @@ import java.util.Random;
 public class Car extends Vehicle {
     //TODO If there is a broken down Truck on the track, then limit the max speed of cars to 75 km/h.
     //private int currentSpeed; // equal to normalSpeed if there are no broken trucks, 75km/h otherwise
-    //private int normalSpeed;// the normal speed of the car. Set to a random number in the constructor between 80-110km/h.
+    //private int normalSpeed;// Set to a random number in the constructor between 80-110km/h.
     //private int distanceTraveled; // holds the summarized distance traveled in the race.
     //A list from the words here: http://www.fantasynamegenerators.com/car-names.php
     private static final String[] nameComponents = Stream.of(
@@ -22,8 +22,12 @@ public class Car extends Vehicle {
             "Onyx",
             "Grandeur").toArray(String[]::new);
 
-    private void prepareForLap(Race race) { // setup the actual speed used for the current lap
-
+    public void prepareForLap(Race race) { // setup the actual speed used for the current lap
+        if(race.isAnyTruckBroken(false)){
+            currentSpeed = 75;
+        }else{
+            currentSpeed = normalSpeed;
+        }
     }
 
 
@@ -44,5 +48,7 @@ public class Car extends Vehicle {
 
     public Car() {
         name = composeName();
+        Random random = new Random();
+        this.normalSpeed = random.nextInt(31) + 80;
     }
 }

@@ -16,4 +16,8 @@ public class Race {
         weather = new Weather();
     }
 
+    public boolean isAnyTruckBroken(boolean thisMockWillBeReturned){
+        return thisMockWillBeReturned;
+    }
+
 }

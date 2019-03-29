@@ -11,7 +11,7 @@ public class Truck extends Vehicle {
     private Vehicle vehicle;
     //private int distanceTraveled;// holds the summarized distance traveled in the race.
 
-    private void prepareForLap(Race race) {// setup the actual speed used for the current lap
+    public void prepareForLap(Race race) {// setup the actual speed used for the current lap
         if(breakdownTurnsLeft > 0){
             currentSpeed = 0;
         } else {
