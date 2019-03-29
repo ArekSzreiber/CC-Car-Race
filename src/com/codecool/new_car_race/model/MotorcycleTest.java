@@ -12,16 +12,14 @@ class MotorcycleTest {
             assertEquals("Motorcycle "+i, motor.getName());
         }
     }
-/*
+
     @Test
-    void testRidingInRain(){
+    void testPreparationInRain(){
         Race race = new Race(true);
         for (int i = 0; i < 10; i++) {
             Motorcycle motor = new Motorcycle();
             motor.prepareForLap(race);
-            motor.moveForAnHour();
-            System.out.println(motor.getCurrentSpeed());
-            //assertTrue(motor.getCurrentSpeed() >= 50 && motor.getCurrentSpeed() <=100);
+            assertTrue(motor.getCurrentSpeed() >= 50 && motor.getCurrentSpeed() <=100);
         }
-    }*/
+    }
 }
