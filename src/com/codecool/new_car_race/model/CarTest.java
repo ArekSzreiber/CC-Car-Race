@@ -18,6 +18,7 @@ class CarTest {
     void testPreparationWithoutBrokenTruck() {
         Vehicle car;
         Race race = new Race();
+        race.setBrokenTruck(false);
         car = new Car();
         car.prepareForLap(race);
         int maxSpeed = car.getCurrentSpeed();
@@ -36,4 +37,15 @@ class CarTest {
         System.out.println("Normal speed max roll: " + maxSpeed);
         System.out.println("Normal speed min roll: " + minSpeed);
     }
+
+    @Test
+    void testPreparationWithBrokenTruck() {
+        Vehicle car;
+        Race race = new Race();
+        race.setBrokenTruck(true);
+        car = new Car();
+        car.prepareForLap(race);
+        assertEquals(75, car.getCurrentSpeed());
+    }
+
 }

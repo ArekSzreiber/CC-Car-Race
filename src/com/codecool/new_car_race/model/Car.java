@@ -23,7 +23,7 @@ public class Car extends Vehicle {
             "Grandeur").toArray(String[]::new);
 
     public void prepareForLap(Race race) { // setup the actual speed used for the current lap
-        if(race.isAnyTruckBroken(false)){
+        if(race.isAnyTruckBroken()){
             currentSpeed = 75;
         }else{
             currentSpeed = normalSpeed;
