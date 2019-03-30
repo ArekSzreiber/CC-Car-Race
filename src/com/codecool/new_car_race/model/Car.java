@@ -3,7 +3,11 @@ package com.codecool.new_car_race.model;
 import java.util.stream.Stream;
 import java.util.Random;
 
-
+/**
+ * speed: set randomly between 80 - 110 km/h.
+ * If there is a broken down Truck, speed for Car is limit to 75km/h.
+ * names: two words from http://www.fantasynamegenerators.com/car-names.php
+ */
 public class Car extends Vehicle {
     //TODO If there is a broken down Truck on the track, then limit the max speed of cars to 75 km/h.
     //private int currentSpeed; // equal to normalSpeed if there are no broken trucks, 75km/h otherwise
