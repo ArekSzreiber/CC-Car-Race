@@ -11,4 +11,16 @@ public class View {
             System.out.println(i++ + ". " + vehicle.getName());
         }
     }
+
+    private static void printVehicleResult(Vehicle vehicle){
+        System.out.print(vehicle.getName());
+        System.out.println(" travelled "+vehicle.getDistanceTraveled()+"km");
+    }
+
+    public static void printRaceResults(Race race){
+        Vehicle[] vehicles = race.getVehicles();
+        for (Vehicle vehicle : vehicles) {
+            printVehicleResult(vehicle);
+        }
+    }
 }

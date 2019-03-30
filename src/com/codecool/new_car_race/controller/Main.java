@@ -36,7 +36,7 @@ public class Main {
         Race race = new Race();
         createVehicles(race);
         View.showVehiclesNames(race);
-        //race.simulateRace();
-        //race.printRaceResults();
+        race.simulateRace();
+        View.printRaceResults(race);
     }
 }

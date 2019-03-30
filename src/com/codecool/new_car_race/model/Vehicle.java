@@ -14,6 +14,9 @@ public class Vehicle {
         return currentSpeed;
     }
 
+    public int getDistanceTraveled() {
+        return distanceTraveled;
+    }
 
     public void prepareForLap(Race race) {
 

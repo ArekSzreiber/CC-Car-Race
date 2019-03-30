@@ -32,6 +32,14 @@ public class Race {
         return false;
     }
 
+    public void simulateRace() {
+        for (int i = 0; i < 50; i++) {
+            weather.setRaining();
+            for (Vehicle vehicle : vehicles) {
+                vehicle.prepareForLap(this);
+                vehicle.moveForAnHour();
+            }
+        }
     }
 
     public void setBrokenTruck(boolean brokenTruck) {
