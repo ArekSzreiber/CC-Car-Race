@@ -1,5 +1,8 @@
 package com.codecool.new_car_race.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Race {
     private Vehicle[] vehicles;
     private Weather weather;

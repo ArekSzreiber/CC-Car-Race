@@ -1,7 +1,7 @@
 package com.codecool.new_car_race.model;
 
-import java.util.stream.Stream;
 import java.util.Random;
+import java.util.stream.Stream;
 
 /**
  * speed: set randomly between 80 - 110 km/h.
