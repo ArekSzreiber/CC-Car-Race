@@ -35,8 +35,8 @@ public class Main {
     public static void main(String[] args) {
         Race race = new Race();
         createVehicles(race);
-        View.showVehiclesNames(race);
         race.simulateRace();
+        race.sortVehiclesByDistance();
         View.printRaceResults(race);
     }
 }

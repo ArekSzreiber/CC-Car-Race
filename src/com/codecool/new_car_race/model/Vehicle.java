@@ -31,7 +31,13 @@ public class Vehicle {
         distanceTraveled += currentSpeed;
     }
 
-    public static void main(String[] args) {
-        System.out.println("Kurwa");
+    public int compareTo(Vehicle compared) {
+        if (this.getDistanceTraveled() > compared.getDistanceTraveled()) {
+            return -1;
+        } else if (this.getDistanceTraveled() < compared.getDistanceTraveled()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }

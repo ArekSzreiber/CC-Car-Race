@@ -12,15 +12,20 @@ public class View {
         }
     }
 
-    private static void printVehicleResult(Vehicle vehicle){
+    private static void printVehicleResult(Vehicle vehicle) {
         System.out.print(vehicle.getName());
-        System.out.println(" travelled "+vehicle.getDistanceTraveled()+"km");
+        System.out.println(" travelled " + vehicle.getDistanceTraveled() + "km");
     }
 
-    public static void printRaceResults(Race race){
+    public static void printRaceResults(Race race) {
         Vehicle[] vehicles = race.getVehicles();
+        System.out.println("Car Race has finished!");
+        System.out.println("Vehicles results:");
+        int i = 1;
         for (Vehicle vehicle : vehicles) {
+            System.out.print(i + ". ");
             printVehicleResult(vehicle);
+            i++;
         }
     }
 }

@@ -22,9 +22,9 @@ public class Race {
     }
 
     public boolean isAnyTruckBroken() {
-        for(Vehicle vehicle : vehicles){
-            if(vehicle instanceof Truck){
-                if(((Truck) vehicle).isBroken()){
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle instanceof Truck) {
+                if (((Truck) vehicle).isBroken()) {
                     return true;
                 }
             }
@@ -48,5 +48,11 @@ public class Race {
 
     public void setVehicles(Vehicle[] vehicles) {
         this.vehicles = vehicles;
+    }
+
+    public void sortVehiclesByDistance() {
+        ArrayList<Vehicle> vehicleArrayList = new ArrayList<>(Arrays.asList(vehicles));
+        vehicleArrayList.sort(Vehicle::compareTo);
+        vehicles = vehicleArrayList.toArray(new Vehicle[vehicles.length]);
     }
 }
