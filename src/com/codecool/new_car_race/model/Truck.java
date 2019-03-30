@@ -2,13 +2,13 @@ package com.codecool.new_car_race.model;
 
 import java.util.Random;
 
+/**
+ * speed: 100km/h. 5% chance of breaking down for 2 turns.
+ * names: Truck drivers are boring. They call all their trucks a random number between 0 and 1000.
+ */
 public class Truck extends Vehicle {
-    //TODO Truck  5% chance of breaking down for 2 turns.
-    //private int currentSpeed; // 0 if Truck is broken, else is equal to normalSpeed
-    //private int normalSpeed; // always 100km/h
-    //private String name;// Truck drivers call all their trucks a random number between 0 and 1000.
     private int breakdownTurnsLeft;// holds how long its still broken down.
-    //private int distanceTraveled;// holds the summarized distance traveled in the race.
+
     private void chanceOfBreakingDown() {
         Random random = new Random();
         int chanceToBreak = random.nextInt(100);
@@ -34,7 +34,6 @@ public class Truck extends Vehicle {
         }
     }
 
-
     public void prepareForLap(Race race) {// setup the actual speed used for the current lap
         if (isBroken()) {
             currentSpeed = 0;
@@ -43,8 +42,8 @@ public class Truck extends Vehicle {
         }
     }
 
-    private void repairing(){
-        if(isBroken()){
+    private void repairing() {
+        if (isBroken()) {
             breakdownTurnsLeft--;
         }
     }
