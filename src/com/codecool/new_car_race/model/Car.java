@@ -23,23 +23,22 @@ public class Car extends Vehicle {
             "Grandeur").toArray(String[]::new);
 
     public void prepareForLap(Race race) { // setup the actual speed used for the current lap
-        if(race.isAnyTruckBroken()){
+        if (race.isAnyTruckBroken()) {
             currentSpeed = 75;
-        }else{
+        } else {
             currentSpeed = normalSpeed;
         }
     }
 
 
-
     /**
      * @return String, 2 different, randomly chosen words form nameComponents separated with space
      */
-    private String composeName(){
+    private String composeName() {
         Random random = new Random();
         int firstIndex = random.nextInt(nameComponents.length);
         int secondIndex = firstIndex;
-        while (firstIndex == secondIndex){
+        while (firstIndex == secondIndex) {
             secondIndex = random.nextInt(nameComponents.length);
         }
         return nameComponents[firstIndex] + " " + nameComponents[secondIndex];

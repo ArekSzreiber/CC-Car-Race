@@ -15,9 +15,10 @@ public class Vehicle {
     }
 
 
-    public void prepareForLap(Race race){
+    public void prepareForLap(Race race) {
 
     }
+
     /**
      * The vehicle travels for an hour.
      * It increases the distance traveled.

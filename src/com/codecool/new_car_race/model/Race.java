@@ -1,27 +1,35 @@
 package com.codecool.new_car_race.model;
 
 public class Race {
-    //do dodania lista pojazdów
+    private Vehicle[] vehicles;
     private Weather weather;
     public boolean isBrokenTruck;
 
-    public boolean isRaining(){
+    public Vehicle[] getVehicles() {
+        return vehicles;
+    }
+
+    public boolean isRaining() {
         return weather.isRaining();
     }
 
-    Race(boolean isRaining){
+    Race(boolean isRaining) {
         weather = new Weather(isRaining);
     }
 
-    Race(){
+    public Race() {
         weather = new Weather();
     }
 
-    public boolean isAnyTruckBroken(){
+    public boolean isAnyTruckBroken() {
         return isBrokenTruck;
     }
 
     public void setBrokenTruck(boolean brokenTruck) {
         isBrokenTruck = brokenTruck;
+    }
+
+    public void setVehicles(Vehicle[] vehicles) {
+        this.vehicles = vehicles;
     }
 }
