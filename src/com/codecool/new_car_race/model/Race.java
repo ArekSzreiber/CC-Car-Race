@@ -22,7 +22,16 @@ public class Race {
     }
 
     public boolean isAnyTruckBroken() {
-        return isBrokenTruck;
+        for(Vehicle vehicle : vehicles){
+            if(vehicle instanceof Truck){
+                if(((Truck) vehicle).isBroken()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     }
 
     public void setBrokenTruck(boolean brokenTruck) {
