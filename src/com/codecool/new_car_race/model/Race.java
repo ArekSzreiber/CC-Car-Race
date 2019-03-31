@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class Race {
     private Vehicle[] vehicles;
     private Weather weather;
-    public boolean isBrokenTruck;
 
     public Vehicle[] getVehicles() {
         return vehicles;
@@ -43,10 +42,6 @@ public class Race {
                 vehicle.moveForAnHour();
             }
         }
-    }
-
-    public void setBrokenTruck(boolean brokenTruck) {
-        isBrokenTruck = brokenTruck;
     }
 
     public void setVehicles(Vehicle[] vehicles) {
