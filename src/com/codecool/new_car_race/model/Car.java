@@ -34,7 +34,7 @@ public class Car extends Vehicle {
     /**
      * @return String, 2 different, randomly chosen words form nameComponents separated with space
      */
-    private String composeName() {
+    private static String composeName() {
         Random random = new Random();
         int firstIndex = random.nextInt(nameComponents.length);
         int secondIndex = firstIndex;
