@@ -1,16 +1,16 @@
 package com.codecool.new_car_race.model;
 
 public abstract class Vehicle implements Comparable<Vehicle> {
-    protected int currentSpeed;
-    protected int normalSpeed;
-    protected int distanceTraveled;
-    protected String name;
+    int currentSpeed;
+    int normalSpeed;
+    int distanceTraveled;
+    String name;
 
     public String getName() {
         return name;
     }
 
-    public int getCurrentSpeed() {
+    int getCurrentSpeed() {
         return currentSpeed;
     }
 

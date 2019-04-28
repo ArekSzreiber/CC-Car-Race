@@ -13,7 +13,7 @@ public class Race {
         return vehicles;
     }
 
-    public boolean isRaining() {
+    boolean isRaining() {
         return weather.isRaining();
     }
 
@@ -25,7 +25,7 @@ public class Race {
         weather = new Weather();
     }
 
-    public boolean isAnyTruckBroken() {
+    boolean isAnyTruckBroken() {
         for (Vehicle vehicle : vehicles) {
             if (vehicle instanceof Truck) {
                 if (((Truck) vehicle).isBroken()) {

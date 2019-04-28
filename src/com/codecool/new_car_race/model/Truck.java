@@ -17,7 +17,7 @@ public class Truck extends Vehicle {
         }
     }
 
-    public boolean isBroken() {
+    boolean isBroken() {
         return breakdownTurnsLeft > 0;
     }
 
