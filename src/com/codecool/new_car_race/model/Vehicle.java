@@ -1,6 +1,6 @@
 package com.codecool.new_car_race.model;
 
-public class Vehicle implements Comparable<Vehicle> {
+public abstract class Vehicle implements Comparable<Vehicle> {
     protected int currentSpeed;
     protected int normalSpeed;
     protected int distanceTraveled;
@@ -18,9 +18,7 @@ public class Vehicle implements Comparable<Vehicle> {
         return distanceTraveled;
     }
 
-    public void prepareForLap(Race race) {
-
-    }
+    abstract public void prepareForLap(Race race);
 
     /**
      * The vehicle travels for an hour.
