@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class MotorcycleTest {
     @Test
     void testNaming() {
+        Motorcycle.resetCounter();
         for (int i = 1; i <= 10; i++) {
             Vehicle motor = new Motorcycle();
             assertEquals("Motorcycle " + i, motor.getName());

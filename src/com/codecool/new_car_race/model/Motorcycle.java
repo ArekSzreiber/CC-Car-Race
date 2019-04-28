@@ -23,4 +23,8 @@ public class Motorcycle extends Vehicle {
         this.name = "Motorcycle " + motorcyclesCounter;
         this.normalSpeed = 100;
     }
+
+    static void resetCounter(){
+        motorcyclesCounter = 0;
+    }
 }
