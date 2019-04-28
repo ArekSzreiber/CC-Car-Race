@@ -2,6 +2,7 @@ package com.codecool.new_car_race.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Race {
     private Vehicle[] vehicles;
@@ -51,7 +52,7 @@ public class Race {
 
     public void sortVehiclesByDistance() {
         ArrayList<Vehicle> vehicleArrayList = new ArrayList<>(Arrays.asList(vehicles));
-        vehicleArrayList.sort(Vehicle::compareTo);
+        Collections.sort(vehicleArrayList);
         vehicles = vehicleArrayList.toArray(new Vehicle[vehicles.length]);
     }
 }
