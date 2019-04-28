@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Race {
     private Vehicle[] vehicles;
     private Weather weather;
+    private final static int NUM_LAPS = 50;
 
     public Vehicle[] getVehicles() {
         return vehicles;
@@ -35,7 +36,7 @@ public class Race {
     }
 
     public void simulateRace() {
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < NUM_LAPS; i++) {
             weather.setRaining();
             for (Vehicle vehicle : vehicles) {
                 vehicle.prepareForLap(this);
