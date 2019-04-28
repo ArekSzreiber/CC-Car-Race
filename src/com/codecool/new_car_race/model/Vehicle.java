@@ -1,6 +1,6 @@
 package com.codecool.new_car_race.model;
 
-public class Vehicle {
+public class Vehicle implements Comparable<Vehicle> {
     protected int currentSpeed;
     protected int normalSpeed;
     protected int distanceTraveled;
@@ -32,12 +32,6 @@ public class Vehicle {
     }
 
     public int compareTo(Vehicle compared) {
-        if (this.getDistanceTraveled() > compared.getDistanceTraveled()) {
-            return -1;
-        } else if (this.getDistanceTraveled() < compared.getDistanceTraveled()) {
-            return 1;
-        } else {
-            return 0;
-        }
+        return compared.getDistanceTraveled() - this.getDistanceTraveled();
     }
 }
