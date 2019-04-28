@@ -12,14 +12,15 @@ public class Main {
     private static void createVehicles(Race race) {
         int amountInType = 10;
         Vehicle[] vehicles = new Vehicle[3 * amountInType];
+        int j = 0;
         for (int i = 0; i < amountInType; i++) {
-            vehicles[i] = new Car();
+            vehicles[j++] = new Car();
         }
         for (int i = 0; i < amountInType; i++) {
-            vehicles[i + amountInType] = new Motorcycle();
+            vehicles[j++] = new Motorcycle();
         }
         for (int i = 0; i < amountInType; i++) {
-            vehicles[i + 2 * amountInType] = new Truck();
+            vehicles[j++] = new Truck();
         }
         race.setVehicles(vehicles);
     }
